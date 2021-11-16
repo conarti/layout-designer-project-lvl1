@@ -21,6 +21,7 @@
   --white-opacity: #d7ccc0;
   --light: #f5f4f0;
   --main: #fe8a02;
+  --main-hover: #ea7600;
   --main-dark: #42413c;
   --dark: #2a2626;
   --dark-opacity: #908d8b;
@@ -67,14 +68,14 @@ h6 {
 section,
 header,
 footer {
-  position: relative;
-
   padding: 100px 0;
 }
 
-section::before,
-header::before,
-footer::before {
+.section-with-bg {
+  position: relative;
+}
+
+.section-with-bg::before {
   position: absolute;
   z-index: -1;
 
@@ -84,7 +85,7 @@ footer::before {
   background-image: url('../assets/images/background.png');
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 6%;
+  opacity: 10%;
 
   content: '';
 }
@@ -113,8 +114,13 @@ footer::before {
   text-decoration: none;
 
   background-color: var(--main);
-
   cursor: pointer;
+
+  transition: background-color 0.25s;
+}
+
+.btn-main:hover {
+  background-color: var(--main-hover);
 }
 
 .text-container {
@@ -122,6 +128,11 @@ footer::before {
   grid-template-columns: 1fr 1fr;
 
   column-gap: 30px;
+}
+
+.what-is {
+  margin-bottom: -100px;
+  padding-bottom: 0;
 }
 
 .what-is-content {
