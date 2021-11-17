@@ -42,6 +42,9 @@ p {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
 .h1,
 .h2,
 .h3 {
@@ -52,18 +55,27 @@ p {
   line-height: 1.2em;
 }
 
+h1,
+h2,
+h3 {
+  color: var(--main);
+}
+
+h1,
 .h1 {
   margin-bottom: 185px;
 
   font-size: 72px;
 }
 
+h2,
 .h2 {
   margin-bottom: 30px;
 
   font-size: 60px;
 }
 
+h3,
 .h3 {
   font-size: 34px;
 }
@@ -250,6 +262,7 @@ p {
   margin-bottom: 20px;
 
   text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: 700;
 }
@@ -286,15 +299,15 @@ p {
  ****** UTILITIES ******
  */
 
-.color-main {
+.text-main {
   color: var(--main);
 }
 
-.color-white {
+.text-white {
   color: var(--white);
 }
 
-.color-dark {
+.text-dark {
   color: var(--dark);
 }
 
