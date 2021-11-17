@@ -6,12 +6,12 @@
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-  <header class="section-with-bg">
+  <header class="section section-bg">
     <div class="container">
       <h1 class="h1"><span class="color-main">Когнитивные<br>искажения</span><br>в программировании</h1>
       <img class="header-img" src="./assets/images/main.png" alt="main">
 
-      <div class="text-container">
+      <div class="two-column-row">
         <p>
           Мы, разработчики, часто сталкиваемся с проблемами, которые идут вразрез с нашей продуктивностью. Но мы часто игнорируем целостную картину. Некоторые из этих проблем малозаметны, некоторые существенны. Иногда с ними можно как-то справиться, а иногда, к сожалению, нет.
         </p>
@@ -27,7 +27,7 @@
   </header>
 
   <main>
-    <section class="what-is" id="what-is-cognitive-distortion">
+    <section class="section what-is" id="what-is-cognitive-distortion">
       <div class="container what-is-content">
         <h2 class="h2">Что же такое,<br><span class="color-main">когнитивные искажения?</span></h2>
 
@@ -38,19 +38,18 @@
           width="919"
           height="569"
           src="https://www.youtube.com/embed/jie9AizBqss"
-          frameborder="0"
           allowfullscreen
         ></iframe>
       </div>
     </section>
 
-    <section class="distortion-types">
+    <section class="section distortion-types">
       <div class="container">
         <nav class="nav" id="navigation">
-          <h2 class="nav-item distortion-types-title">
+          <h2 class="nav-item distortion-types-title h2">
             <span class="color-main">5 когнитивных искажений</span><br>о существовании которых стоит помнить
           </h2>
-          <a class="nav-item nav-item-card" href="#">
+          <a class="nav-item nav-item-card" href="#ikea-effect">
             <span class="nav-item-number mb-3">1</span>
             <h3 class="h3 color-main mb-1">Эффект ИКЕА</h3>
             <p>Вы переоцениваете собственные решения, и, как следствие, недооцениваете решения других.</p>
@@ -80,9 +79,37 @@
         </nav>
       </div>
     </section>
+
+    <section class="section section-bg distortion distortion-light" id="ikea-effect">
+      <div class="container">
+        <div class="distortion-header image-left two-column-row">
+          <img class="distortion-image" src="./assets/images/1.png" alt="section-image">
+          <div class="distortion-description">
+            <span class="distortion-muted-text">Когнитивные искажения</span>
+            <h2 class="h2">Эффект ИКЕА</h2>
+            <p class="h3">
+              Вы переоцениваете собственные решения, и, как следствие, недооцениваете решения других.
+            </p>
+          </div>
+        </div>
+
+        <h3 class="distortion-manifest">Как проявляется</h3>
+        <div class="two-column-row">
+          <p>
+            Когнитивное искажение называется так из-за того, что потребители зачастую предпочитают покупать товары,
+            которые они могут собрать сами, а не уже собранные кем-то.
+          </p>
+          <p>
+            Мы склонны переоценивать наши собственные решения и недооценивать решения других. Если вы когда-то
+            работали в компании, которая использовала тупой внутренний инструмент вместо более удобного готового
+            решения, вы понимаете, о чём я говорю.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
+  <footer class="section">
     <p>Хотите узнать больше? Подпишитесь на обновления</p>
   </footer>
 </body>

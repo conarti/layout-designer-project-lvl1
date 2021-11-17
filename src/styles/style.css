@@ -18,7 +18,7 @@
 
 :root {
   --white: #fff;
-  --white-opacity: #d7ccc0;
+  --white-50: #d7ccc0;
   --light: #f5f4f0;
   --main: #fe8a02;
   --main-hover: #ea7600;
@@ -42,15 +42,13 @@ p {
   margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.h1,
+.h2,
+.h3 {
   margin: 0;
 
   font-family: Neucha, serif;
+  font-weight: 400;
   line-height: 1.2em;
 }
 
@@ -70,17 +68,17 @@ h6 {
   font-size: 34px;
 }
 
-section,
-header,
-footer {
+.section {
   padding: 100px 0;
 }
 
-.section-with-bg {
+.section-bg {
   position: relative;
+
+  overflow: hidden;
 }
 
-.section-with-bg::before {
+.section-bg::before {
   position: absolute;
   z-index: -1;
 
@@ -128,12 +126,9 @@ footer {
   background-color: var(--main-hover);
 }
 
-.text-container {
-  display: flex;
-  grid-template-columns: 1fr 1fr;
-
-  column-gap: 30px;
-}
+/**
+  ***** ABOUT *****
+ */
 
 .what-is {
   margin-bottom: -100px;
@@ -145,20 +140,27 @@ footer {
 }
 
 .video {
+  border: 0;
+
   filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
 }
 
 .distortion-types {
   padding-top: 200px;
 
+  color: var(--white);
+
   background-color: var(--dark);
 }
 
 .distortion-types-title {
-  color: var(--white);
   font-weight: 400;
   font-size: 52px;
 }
+
+/**
+  ***** NAVIGATION *****
+ */
 
 .nav {
   display: flex;
@@ -199,6 +201,88 @@ footer {
 }
 
 /**
+  ***** DISTORTION *****
+ */
+
+.distortion {
+  position: relative;
+}
+
+.distortion::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+
+  content: '';
+}
+
+.distortion-header {
+  margin-bottom: 100px;
+}
+
+.distortion-header.image-left > .distortion-image {
+  order: -1;
+}
+
+.distortion-header.image-right > .distortion-image {
+  order: 1;
+}
+
+.distortion-muted-text {
+  font-size: 24px;
+  font-family: Neucha, serif;
+}
+
+.distortion-light .distortion-muted-text {
+  color: var(--dark-opacity);
+}
+
+.distortion-brown .distortion-muted-text {
+  color: var(--white-50);
+}
+
+.distortion-manifest {
+  padding: 5px 10px;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.distortion-light {
+  color: var(--dark);
+}
+
+.distortion-light::after {
+  background-color: var(--light);
+}
+
+.distortion-brown {
+  color: var(--white);
+}
+
+.distortion-brown::after {
+  background-color: var(--brown);
+}
+
+.distortion-light .distortion-manifest {
+  color: var(--white);
+
+  background-color: var(--brown);
+}
+
+.distortion-brown .distortion-manifest {
+  color: var(--brown);
+
+  background-color: var(--white);
+}
+
+/**
  ****** UTILITIES ******
  */
 
@@ -224,4 +308,14 @@ footer {
 
 .mb-3 {
   margin-bottom: 40px;
+}
+
+.two-column-row {
+  display: flex;
+
+  column-gap: 30px;
+}
+
+.two-column-row > * {
+  flex-basis: 50%;
 }
